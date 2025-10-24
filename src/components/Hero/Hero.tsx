@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
                 Записаться в сервис
               </button>
               <a href="tel:+79001234567" className="btn btn-secondary btn-lg">
-                +7 (900) 123-45-67
+                +7 (927) 667-69-85
               </a>
             </div>
           </motion.div>

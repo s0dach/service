@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./MapSection.css";
-// Import SVG files as React components
-import TimeIcon from "../../assets/svg/time.svg"
-import LocationIcon from "../../assets/svg/location.svg"
-import PhoneIcon from "../../assets/svg/phone.svg"
+// Import SVG files as URLs
+import timeIcon from "../../assets/svg/time.svg"
+import locationIcon from "../../assets/svg/location.svg"
+import phoneIcon from "../../assets/svg/phone.svg"
 
 const MapSection: React.FC = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -50,17 +50,17 @@ const MapSection: React.FC = () => {
 
               <div className="contact-simple">
                 <div className="contact-simple__item">
-                  <span><PhoneIcon className="contact-icon" /></span>
+                  <span><img src={phoneIcon} alt="Телефон" className="contact-icon" /></span>
                   <a href="tel:+79276676985">+7 (927) 667-69-85</a>
                 </div>
 
                 <div className="contact-simple__item">
-                  <span><LocationIcon className="contact-icon" /></span>
+                  <span><img src={locationIcon} alt="Адрес" className="contact-icon" /></span>
                   <p>г. Чебоксары, ул. Чернышевского 23</p>
                 </div>
 
                 <div className="contact-simple__item">
-                  <span><TimeIcon className="contact-icon" /></span>
+                  <span><img src={timeIcon} alt="Время работы" className="contact-icon" /></span>
                   <p>ПН-ПТ: 8:30 - 19:00</p>
                 </div>
               </div>

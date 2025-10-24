@@ -201,7 +201,7 @@ const BookingForm: React.FC = () => {
                         message: 'Введите корректный номер телефона'
                       }
                     })}
-                    placeholder="+7 (900) 123-45-67"
+                    placeholder="+7 (927) 667-69-85"
                   />
                   {errors.phone && <span className="form-error">{errors.phone.message}</span>}
                 </div>
