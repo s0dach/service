@@ -1,3 +1,4 @@
+# Основные правила для всех поисковых систем
 User-agent: *
 Allow: /
 
@@ -14,18 +15,23 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Sitemap
-Sitemap: https://centerauto21.ru/sitemap.xml
+# Sitemap для Яндекса (приоритет)
+Sitemap: https://centerauto21.ru/sitemap-yandex.xml
 
 # Crawl-delay для предотвращения перегрузки сервера
 Crawl-delay: 1
 
-# Специальные директивы для поисковых систем
-User-agent: Googlebot
-Allow: /
-
+# Специальные директивы для Яндекса
 User-agent: Yandex
 Allow: /
+Crawl-delay: 1
+
+# Ограничения для других поисковых систем
+User-agent: Googlebot
+Disallow: /
 
 User-agent: Bingbot
-Allow: /
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
