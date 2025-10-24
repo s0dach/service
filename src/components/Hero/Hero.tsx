@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import "./Hero.css";
 
 // Импорт изображений
-import EngineImage from "../../assets/images/hero/engine.png";
 import CarImage from "../../assets/images/hero/car.png";
 
 const Hero: React.FC = () => {
@@ -39,9 +38,9 @@ const Hero: React.FC = () => {
             <div className="hero__divider"></div>
 
             <p className="hero__subtitle">
-              Техническое обслуживание и ремонт автомобилей с гарантией
-              качества. Сертифицированные специалисты. Оригинальные запчасти.
-              Фиксированные цены.
+              Профессиональный автосервис в Чебоксарах. Ремонт и техническое обслуживание автомобилей с гарантией качества. 
+              Сертифицированные специалисты, оригинальные запчасти, фиксированные цены. 
+              Диагностика за 30 минут, гарантия 12 месяцев.
             </p>
 
             <div className="hero__features">
@@ -102,7 +101,7 @@ const Hero: React.FC = () => {
               >
                 <img
                   src={CarImage}
-                  alt="Автомобиль"
+                  alt="Автомобиль в автосервисе Центр Авто в Чебоксарах - профессиональный ремонт и обслуживание"
                   className="hero__car-image"
                 />
                 <div className="hero__car-glow"></div>

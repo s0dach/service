@@ -5,17 +5,165 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#dc2626" />
-    <meta
-      name="description"
-      content="Профессиональный автосервис - качественный ремонт и обслуживание автомобилей"
-    />
+    
+    <!-- Основные SEO мета-теги -->
+    <title>Центр Авто - Автосервис в Чебоксарах | Ремонт и обслуживание автомобилей</title>
+    <meta name="description" content="Автосервис Центр Авто в Чебоксарах. Профессиональный ремонт автомобилей, диагностика, ТО. Оригинальные запчасти, гарантия 12 месяцев. Запись: +7 (927) 667-69-85" />
+    <meta name="keywords" content="автосервис Чебоксары, ремонт автомобилей, диагностика авто, ТО автомобиля, автосервис Центр Авто, запчасти, гарантия" />
+    <meta name="author" content="Центр Авто" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <!-- Open Graph мета-теги для социальных сетей -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Центр Авто - Автосервис в Чебоксарах | Ремонт и обслуживание автомобилей" />
+    <meta property="og:description" content="Профессиональный автосервис в Чебоксарах. Ремонт, диагностика, ТО автомобилей. Оригинальные запчасти, гарантия 12 месяцев." />
+    <meta property="og:url" content="https://centerauto21.ru" />
+    <meta property="og:site_name" content="Центр Авто" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:image" content="https://centerauto21.ru/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Автосервис Центр Авто в Чебоксарах" />
+    
+    <!-- Twitter Card мета-теги -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Центр Авто - Автосервис в Чебоксарах" />
+    <meta name="twitter:description" content="Профессиональный ремонт и обслуживание автомобилей в Чебоксарах" />
+    <meta name="twitter:image" content="https://centerauto21.ru/og-image.jpg" />
+    
+    <!-- Дополнительные SEO мета-теги -->
+    <meta name="geo.region" content="RU-CU" />
+    <meta name="geo.placename" content="Чебоксары" />
+    <meta name="geo.position" content="56.121898;47.173304" />
+    <meta name="ICBM" content="56.121898, 47.173304" />
+    
+    <!-- Мобильная оптимизация -->
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Центр Авто" />
+    
+    <!-- Канонический URL -->
+    <link rel="canonical" href="https://centerauto21.ru" />
+    
+    <!-- Альтернативные языки (если планируется) -->
+    <link rel="alternate" hreflang="ru" href="https://centerauto21.ru" />
+    
+    <!-- Предзагрузка критических ресурсов -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://yandex.ru" />
+    
+    <!-- Шрифты -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Condensed:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Центр авто - Профессиональный автосервис</title>
+    
+    <!-- Структурированные данные JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutomotiveRepairShop",
+      "name": "Центр Авто",
+      "description": "Профессиональный автосервис в Чебоксарах. Ремонт, диагностика и техническое обслуживание автомобилей.",
+      "url": "https://centerauto21.ru",
+      "logo": "https://centerauto21.ru/logo.png",
+      "image": "https://centerauto21.ru/og-image.jpg",
+      "telephone": "+79276676985",
+      "email": "info@centerauto21.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Чернышевского, 23",
+        "addressLocality": "Чебоксары",
+        "addressRegion": "Чувашская Республика",
+        "postalCode": "428000",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 56.121898,
+        "longitude": 47.173304
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:30",
+          "closes": "19:00"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 56.121898,
+          "longitude": 47.173304
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги автосервиса",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Диагностика автомобиля",
+              "description": "Компьютерная диагностика всех систем автомобиля"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт двигателя",
+              "description": "Ремонт и обслуживание двигателей всех типов"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт тормозной системы",
+              "description": "Диагностика и ремонт тормозных систем"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ремонт КПП",
+              "description": "Ремонт механических и автоматических коробок передач"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Техническое обслуживание",
+              "description": "Плановое техническое обслуживание автомобилей"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "RUB",
+      "paymentAccepted": "Cash, Credit Card",
+      "foundingDate": "2019",
+      "slogan": "Профессиональный сервис с гарантией качества"
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

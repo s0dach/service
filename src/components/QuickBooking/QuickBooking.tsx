@@ -26,7 +26,6 @@ const QuickBooking: React.FC = () => {
     formState: { errors },
     reset,
     setValue,
-    watch,
   } = useForm<QuickFormData>();
 
   // Маска для российского номера телефона
@@ -64,46 +63,6 @@ const QuickBooking: React.FC = () => {
     setValue("phone", formatted);
   };
 
-  const sendToTelegram = async (data: QuickFormData) => {
-    // Здесь будет ваш Telegram Bot Token и Chat ID
-    const BOT_TOKEN = "YOUR_BOT_TOKEN";
-    const CHAT_ID = "YOUR_CHAT_ID";
-
-    const message = `
-🚗 *Быстрая заявка на бесплатный осмотр*
-
-👤 *Клиент:* ${data.name}
-📞 *Телефон:* ${data.phone}
-🚙 *Автомобиль:* ${data.car}
-🔧 *Проблема:* ${data.problem}
-    `;
-
-    try {
-      const response = await fetch(
-        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            chat_id: CHAT_ID,
-            text: message,
-            parse_mode: "Markdown",
-          }),
-        }
-      );
-
-      if (response.ok) {
-        return true;
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
-      console.error("Error sending to Telegram:", error);
-      return false;
-    }
-  };
 
   const onSubmit = async (data: QuickFormData) => {
     setIsSubmitting(true);
@@ -151,11 +110,11 @@ const QuickBooking: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <h4 className="quick-booking__urgent-title">
-                  Нужен срочный ремонт?
+                  Нужен срочный ремонт автомобиля в Чебоксарах?
                 </h4>
                 <p className="quick-booking__urgent-text">
-                  Не откладывайте! Запишитесь на бесплатную диагностику прямо
-                  сейчас. Наши мастера быстро определят проблему и предложат
+                  Не откладывайте! Запишитесь на бесплатную диагностику в автосервисе Центр Авто 
+                  прямо сейчас. Наши мастера быстро определят проблему и предложат
                   оптимальное решение.
                 </p>
               </motion.div>
@@ -169,7 +128,7 @@ const QuickBooking: React.FC = () => {
               >
                 <img
                   src={QuickBookingImage}
-                  alt="Срочный ремонт автомобиля"
+                  alt="Срочный ремонт автомобиля в автосервисе Центр Авто в Чебоксарах - профессиональная диагностика и ремонт"
                   className="quick-booking__img"
                 />
               </motion.div>
@@ -179,10 +138,11 @@ const QuickBooking: React.FC = () => {
             <div className="quick-booking__right">
               <div className="quick-booking__header">
                 <h3 className="quick-booking__title">
-                  Запишись на бесплатный осмотр прямо сейчас
+                  Запишись на бесплатный осмотр в автосервисе Центр Авто
                 </h3>
                 <p className="quick-booking__subtitle">
-                  Мы перезвоним, ответим на все вопросы и запишем в сервис
+                  Мы перезвоним, ответим на все вопросы и запишем в сервис. 
+                  Бесплатная диагностика, скидки на ремонт, гарантия качества.
                 </p>
               </div>
 

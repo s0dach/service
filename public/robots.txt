@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Основные страницы
+Allow: /#services
+Allow: /#about
+Allow: /#contacts
+Allow: /#booking
+Allow: /#gallery
+Allow: /#map
+
+# Запрещенные директории
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://centerauto21.ru/sitemap.xml
+
+# Crawl-delay для предотвращения перегрузки сервера
+Crawl-delay: 1
+
+# Специальные директивы для поисковых систем
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Bingbot
+Allow: /
