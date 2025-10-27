@@ -36,43 +36,45 @@ const BookingForm: React.FC = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
   const sendToTelegram = async (data: FormData) => {
-    // Здесь будет ваш Telegram Bot Token и Chat ID
-    const BOT_TOKEN = 'YOUR_BOT_TOKEN';
-    const CHAT_ID = 'YOUR_CHAT_ID';
-    
-    const message = `
-🚗 *Новая заявка на запись в автосервис*
+    const BOT_TOKEN = "8364151395:AAFXDthIYzyv-XjwVRS-SGisci2Bd4nonIM";
+    // Замените на ваш Chat ID или username бота
+    const CHAT_ID = "-1003238787507"; // или ваш chat ID
 
-👤 *Клиент:* ${data.name}
+    const message = `🚗 *Новая заявка с сайта*
+
+👤 *Имя:* ${data.name}
 📞 *Телефон:* ${data.phone}
 📧 *Email:* ${data.email}
-🔧 *Услуга:* ${data.service}
 🚙 *Автомобиль:* ${data.car}
-📅 *Дата:* ${data.date}
+🔧 *Услуга:* ${data.service}
+📅 *Желаемая дата:* ${data.date}
 ⏰ *Время:* ${data.time}
-💬 *Комментарий:* ${data.message || 'Не указан'}
+📝 *Сообщение:* ${data.message}
     `;
 
     try {
-      const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message,
-          parse_mode: 'Markdown',
-        }),
-      });
+      const response = await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: message,
+            parse_mode: "Markdown",
+          }),
+        }
+      );
 
       if (response.ok) {
         return true;
       } else {
-        throw new Error('Failed to send message');
+        throw new Error("Failed to send message");
       }
     } catch (error) {
-      console.error('Error sending to Telegram:', error);
+      console.error("Error sending to Telegram:", error);
       return false;
     }
   };
@@ -80,15 +82,16 @@ const BookingForm: React.FC = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
-    // Имитация отправки (замените на реальную отправку в Telegram)
     try {
-      // const success = await sendToTelegram(data);
+      // Отправка в Telegram
+      const sent = await sendToTelegram(data);
       
-      // Для демонстрации используем setTimeout
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setSubmitStatus('success');
-      reset();
+      if (sent) {
+        setSubmitStatus('success');
+        reset();
+      } else {
+        setSubmitStatus('error');
+      }
       
       // Сброс статуса через 5 секунд
       setTimeout(() => {
@@ -201,7 +204,7 @@ const BookingForm: React.FC = () => {
                         message: 'Введите корректный номер телефона'
                       }
                     })}
-                    placeholder="+7 (927) 667-69-85"
+                    placeholder="+7 (8352) 37-10-21"
                   />
                   {errors.phone && <span className="form-error">{errors.phone.message}</span>}
                 </div>
@@ -321,6 +324,7 @@ const BookingForm: React.FC = () => {
 };
 
 export default BookingForm;
+
 
 
 

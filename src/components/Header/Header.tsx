@@ -87,7 +87,7 @@ const Header: React.FC = () => {
 
           <div className="header__actions">
             <a href="tel:+79276676985" className="header__phone">
-              +7 (927) 667-69-85
+              +7 (8352) 37-10-21
             </a>
             <button
               className="header__mobile-toggle"

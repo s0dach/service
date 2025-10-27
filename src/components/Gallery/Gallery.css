@@ -87,6 +87,17 @@
   overflow: hidden;
 }
 
+.gallery__image-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.gallery__item:hover .gallery__image-real {
+  transform: scale(1.05);
+}
+
 .gallery__image-content {
   display: flex;
   flex-direction: column;
@@ -197,6 +208,12 @@
   width: 100%;
   height: 400px;
   position: relative;
+}
+
+.gallery__modal-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery__modal-placeholder {

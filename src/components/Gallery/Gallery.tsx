@@ -1,26 +1,32 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Gallery.css";
+// Импорт изображений
+import galleryImage1 from "../../assets/images/gallery/1.jpg";
+import galleryImage2 from "../../assets/images/gallery/2.jpg";
 
 interface GalleryImage {
   id: number;
   title: string;
   category: string;
   placeholder: string;
+  src?: string;
 }
 
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    title: "Фото добавим сюда",
+    title: "Автосервис Центр Авто",
     category: "equipment",
-    placeholder: "Фото добавим сюда",
+    placeholder: "Автосервис Центр Авто",
+    src: galleryImage1,
   },
   {
     id: 2,
-    title: "Фото добавим сюда",
+    title: "Ремонт автомобилей в Чебоксарах",
     category: "workspace",
-    placeholder: "Фото добавим сюда",
+    placeholder: "Ремонт автомобилей в Чебоксарах",
+    src: galleryImage2,
   },
   {
     id: 3,
@@ -122,12 +128,20 @@ const Gallery: React.FC = () => {
                 layout
               >
                 <div className="gallery__image-placeholder">
-                  <div className="gallery__image-content">
-                    <div className="gallery__image-icon">📸</div>
-                    <div className="gallery__image-text">
-                      {image.placeholder}
+                  {image.src ? (
+                    <img 
+                      src={image.src} 
+                      alt={image.title} 
+                      className="gallery__image-real"
+                    />
+                  ) : (
+                    <div className="gallery__image-content">
+                      <div className="gallery__image-icon">📸</div>
+                      <div className="gallery__image-text">
+                        {image.placeholder}
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="gallery__image-overlay">
                     <div className="gallery__image-title">{image.title}</div>
                     <div className="gallery__image-zoom">🔍</div>
@@ -162,17 +176,25 @@ const Gallery: React.FC = () => {
                   ✕
                 </button>
                 <div className="gallery__modal-image">
-                  <div className="gallery__modal-placeholder">
-                    <div className="gallery__modal-icon">📸</div>
-                    <div className="gallery__modal-text">
-                      {selectedImage.placeholder}
+                  {selectedImage.src ? (
+                    <img 
+                      src={selectedImage.src} 
+                      alt={selectedImage.title} 
+                      className="gallery__modal-real"
+                    />
+                  ) : (
+                    <div className="gallery__modal-placeholder">
+                      <div className="gallery__modal-icon">📸</div>
+                      <div className="gallery__modal-text">
+                        {selectedImage.placeholder}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className="gallery__modal-info">
                   <h3>{selectedImage.title}</h3>
                   <p>
-                    Здесь будет ваша фотография: {selectedImage.placeholder}
+                    {selectedImage.src ? "Фото нашего автосервиса" : `Здесь будет ваша фотография: ${selectedImage.placeholder}`}
                   </p>
                 </div>
               </motion.div>

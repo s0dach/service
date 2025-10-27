@@ -64,15 +64,59 @@ const QuickBooking: React.FC = () => {
   };
 
 
+  const sendToTelegram = async (data: QuickFormData) => {
+    const BOT_TOKEN = "8364151395:AAFXDthIYzyv-XjwVRS-SGisci2Bd4nonIM";
+    // Замените на ваш Chat ID или username бота
+    const CHAT_ID = "-1003238787507"; // или ваш chat ID
+
+    const message = `🚗 *Новая заявка*
+
+👤 *Имя:* ${data.name}
+📞 *Телефон:* ${data.phone}
+🚙 *Автомобиль:* ${data.car}
+🔧 *Проблема:* ${data.problem}
+    `;
+
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: message,
+            parse_mode: "Markdown",
+          }),
+        }
+      );
+
+      if (response.ok) {
+        return true;
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending to Telegram:", error);
+      return false;
+    }
+  };
+
   const onSubmit = async (data: QuickFormData) => {
     setIsSubmitting(true);
 
     try {
-      // Имитация отправки (замените на реальную отправку в Telegram)
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      setSubmitStatus("success");
-      reset();
+      // Отправка в Telegram
+      const sent = await sendToTelegram(data);
+      
+      if (sent) {
+        setSubmitStatus("success");
+        reset();
+      } else {
+        setSubmitStatus("error");
+      }
 
       // Сброс статуса через 5 секунд
       setTimeout(() => {

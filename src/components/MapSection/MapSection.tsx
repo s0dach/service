@@ -51,12 +51,12 @@ const MapSection: React.FC = () => {
               <div className="contact-simple">
                 <div className="contact-simple__item">
                   <span><img src={phoneIcon} alt="Телефон" className="contact-icon" /></span>
-                  <a href="tel:+79276676985">+7 (927) 667-69-85</a>
+                  <a href="tel:+79276676985">+7 (8352) 37-10-21</a>
                 </div>
 
                 <div className="contact-simple__item">
                   <span><img src={locationIcon} alt="Адрес" className="contact-icon" /></span>
-                  <p>г. Чебоксары, ул. Чернышевского 23</p>
+                  <p>г. Чебоксары, ул. Чернышевского 15</p>
                 </div>
 
                 <div className="contact-simple__item">
@@ -65,15 +65,6 @@ const MapSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="legal-info">
-                <p>
-                  ИП Леха
-                  <br />
-                  ОГРНИП 228
-                  <br />
-                  ИНН 1488
-                </p>
-              </div>
             </div>
           </motion.div>
 
