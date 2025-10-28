@@ -51,7 +51,7 @@ const MapSection: React.FC = () => {
               <div className="contact-simple">
                 <div className="contact-simple__item">
                   <span><img src={phoneIcon} alt="Телефон" className="contact-icon" /></span>
-                  <a href="tel:+79276676985">+7 (8352) 37-10-21</a>
+                  <a href="tel:+78352371021">+7 (8352) 37-10-21</a>
                 </div>
 
                 <div className="contact-simple__item">
@@ -61,7 +61,7 @@ const MapSection: React.FC = () => {
 
                 <div className="contact-simple__item">
                   <span><img src={timeIcon} alt="Время работы" className="contact-icon" /></span>
-                  <p>ПН-ПТ: 8:30 - 19:00</p>
+                  <p>ПН-ВС 9:00 - 19:00</p>
                 </div>
               </div>
 

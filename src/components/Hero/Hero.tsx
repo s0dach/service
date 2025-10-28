@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             <div className="hero__divider"></div>
 
             <p className="hero__subtitle">
-              Автосервис Чебоксары на Чернышевского 23. Ремонт двигателя, замена ГРМ, помпы, термостата, радиатора, масла. 
+              Автосервис Чебоксары на Чернышевского 15. Ремонт двигателя, замена ГРМ, помпы, термостата, радиатора, масла. 
               Шиномонтаж Чернышевского. Промывка печки и радиатора. Финская долина, Эльменя, Энтузиастов, Чапаевский посёлок. 
               Гарантия 12 месяцев.
             </p>
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
                 <div className="hero__stat-label">КЛИЕНТОВ</div>
               </div>
               <div className="hero__stat">
-                <div className="hero__stat-number">5</div>
+                <div className="hero__stat-number">10</div>
                 <div className="hero__stat-label">ЛЕТ ОПЫТА</div>
               </div>
               <div className="hero__stat">
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
               >
                 Записаться в сервис
               </button>
-              <a href="tel:+79001234567" className="btn btn-secondary btn-lg">
+              <a href="tel:+78352371021" className="btn btn-secondary btn-lg">
                 +7 (8352) 37-10-21
               </a>
             </div>

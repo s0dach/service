@@ -118,7 +118,15 @@ const services: Service[] = [
     price: 'от 20 000 ₽',
     features: ['Капитальный ремонт', 'Замена поршневой группы', 'Ремонт ГБЦ', 'Настройка систем', 'Замена ГРМ', 'Замена помпы', 'Замена термостата', 'Замена радиатора'],
     image: Dvigatel
-  }
+  },
+  {
+    id: 7,
+    title: 'РЕМОНТ ТРАНСМИССИИ',
+    description: 'Ремонт коробки передач в Чебоксарах. МКПП, замена сцепления, диагностика КПП',
+    price: 'от 15 000 ₽',
+    features: ['Ремонт МКПП', 'Замена сцепления', 'Диагностика трансмиссии'],
+    image: Hodovka
+  },
 ];
 
 const Services: React.FC = () => {
@@ -260,7 +268,7 @@ const Services: React.FC = () => {
         >
           <h3 className="heading-md">Не нашли нужную услугу?</h3>
           <p className="text-lg">Свяжитесь с нами, и мы поможем решить любую проблему с вашим автомобилем</p>
-          <a href="tel:+79001234567" className="btn btn-secondary btn-lg">
+          <a href="tel:+78352371021" className="btn btn-secondary btn-lg">
             Получить консультацию
           </a>
         </motion.div> */}
