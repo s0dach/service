@@ -37,24 +37,47 @@ const Hero: React.FC = () => {
 
             <div className="hero__divider"></div>
 
-            <p className="hero__subtitle">
-              Автосервис Чебоксары на Чернышевского 15. Ремонт двигателя, замена ГРМ, помпы, термостата, радиатора, масла. 
-              Шиномонтаж Чернышевского. Промывка печки и радиатора. Финская долина, Эльменя, Энтузиастов, Чапаевский посёлок. 
-              Гарантия 12 месяцев.
-            </p>
+            {/* <p className="hero__subtitle">
+              Качественный ремонт автомобилей отечественного производства и иномарок — это к нам!
+              СТО «Центр Авто» выполняет следующие работы:
+            </p> */}
 
             <div className="hero__features">
               <div className="hero__feature">
                 <div className="hero__feature-icon">✓</div>
-                <span>Диагностика за 30 минут</span>
+                <span>Компьютерная диагностика, диагностика двигателя, КПП, тормозной системы, диагностика подвески.</span>
               </div>
               <div className="hero__feature">
                 <div className="hero__feature-icon">✓</div>
-                <span>Гарантия 12 месяцев</span>
+                <span>Техническое обслуживание автомобилей: замена масла, замена антифриза и технических жидкостей, замена воздушного фильтра, замена салонного фильтра.</span>
               </div>
               <div className="hero__feature">
                 <div className="hero__feature-icon">✓</div>
-                <span>Оригинальные запчасти</span>
+                <span>Ремонт подвески, огромный спектр слесарных работ.</span>
+              </div>
+                            <div className="hero__feature">
+                <div className="hero__feature-icon">✓</div>
+                <span>Замена тормозных дисков и колодок, ремонт суппортов, замена тормозных трубок, замена тормозной жидкости.</span>
+              </div>
+                            <div className="hero__feature">
+                <div className="hero__feature-icon">✓</div>
+                <span>Замена сцепления и ремонт приводных валов. Замена масла КПП.</span>
+              </div>
+                            <div className="hero__feature">
+                <div className="hero__feature-icon">✓</div>
+                <span>Замена ремня ГРМ. Замена цепи ГРМ. Замена сальников, прокладок.</span>
+              </div>
+                            <div className="hero__feature">
+                <div className="hero__feature-icon">✓</div>
+                <span>Капитальный ремонт ДВС, КПП.</span>
+              </div>
+                            <div className="hero__feature">
+                <div className="hero__feature-icon">✓</div>
+                <span>Промывка форсунок и системы охлаждения, радиаторов охлаждения и отопления.</span>
+              </div>
+                                          <div className="hero__feature">
+                <div className="hero__feature-icon">✓</div>
+                <span>В наличии большой выбор тех. жидкостей, масел, фильтров, оригинальных и аналоговых запчастей.</span>
               </div>
             </div>
 
