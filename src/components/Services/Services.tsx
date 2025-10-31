@@ -19,6 +19,7 @@ import Vihlop from '../../assets/images/services/noroot.png.webp'
 import Hodovka from '../../assets/images/services/photo.png.webp'
 import Rulevoe from '../../assets/images/services/rul-min.png.webp'
 import Ohlajdenie from '../../assets/images/services/XAAAAgPvseA-960.jpg.webp'
+import Disk from '../../assets/images/services/disk.jpg'
 
 interface Service {
   id: number;
@@ -101,7 +102,7 @@ const services: Service[] = [
     description: 'Автосервис шиномонтаж Чернышевского в Чебоксарах. Шиномонтаж эльменя, энтузиастов, юго-запад. Центр Авто на Чернышевского 23',
     price: 'от 1 500 ₽',
     features: ['Шиномонтаж легковых', 'Балансировка колес', 'Ремонт проколов', 'Замена шин'],
-    image: Kpp
+    image: Disk
   },
   {
     id: 10,
@@ -109,7 +110,7 @@ const services: Service[] = [
     description: 'Ремонт ходовой части в автосервисе Центр Авто. Амортизаторы, подвеска, балансировка',
     price: 'от 1 000 ₽',
     features: ['Замена амортизаторов', 'Ремонт подвески', 'Замена сайлентблоков', 'Балансировка колес'],
-    image: Kpp
+    image: Hodovka
   },
   {
     id: 11,
@@ -125,7 +126,7 @@ const services: Service[] = [
     description: 'Ремонт коробки передач в Чебоксарах. МКПП, замена сцепления, диагностика КПП',
     price: 'от 15 000 ₽',
     features: ['Ремонт МКПП', 'Замена сцепления', 'Диагностика трансмиссии'],
-    image: Hodovka
+    image: Kpp
   },
 ];
 
